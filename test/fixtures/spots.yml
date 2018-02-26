@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: MyString
+  description: MyString
+  obstacles: MyString
+  level_of_difficulty: MyString
+  image: MyString
+  user: one
+
+two:
+  location: MyString
+  description: MyString
+  obstacles: MyString
+  level_of_difficulty: MyString
+  image: MyString
+  user: two
