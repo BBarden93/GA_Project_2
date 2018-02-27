@@ -1,2 +1,10 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h1>Edit User</h1>
+
+<%= form_for(@user) do |f| %>
+    <%= f.text_field(:name, {placeholder: "Name"}) %>
+    <%= f.text_field(:email, {placeholder: "Email"}) %>
+    <%= f.password_field(:password, {placeholder: "Password"}) %>
+    <%= f.text_field(:image, {placeholder: "Profile Picture"}) %>
+    <%= f.text_field(:about, {placeholder: "Bio"}) %>    
+    <%= f.submit("Update Ripper") %>
+<% end %>

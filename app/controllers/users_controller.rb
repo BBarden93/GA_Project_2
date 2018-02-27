@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authorize, only: [:show, :edit, :update, :destroy]
+  
   def index
     @users = User.all
   end
@@ -8,22 +10,38 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new 
+    @user = User.new    
   end
 
   def create
     @user = User.new(user_params)
-     @user.save
-      redirect_to root_path
+    if @user.save 
+      session[:user_id] = @user.id 
+      redirect_to("/users/#{@user.id}")
+    else
+      flash[:warning] = "Check email and password"
+      redirect_to new_user_path
+    end 
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def update
+    @user = User.find(params[:id])
+    @user.name = params[:user][:name]
+    @user.email = params[:user][:email]
+    @user.image = params[:user][:image]
+    @user.about = params[:user][:about] 
+    @user.save   
+    redirect_to("/users/#{@user.id}")
   end
 
   def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to("/")
   end
 
   private

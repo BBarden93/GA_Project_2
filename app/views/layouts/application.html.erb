@@ -9,17 +9,22 @@
   </head>
 
   <body>
-<ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link active" href="/">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/users/new">Sign Up</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Sign In</a>
-  </li>
-</ul>
-    <%= yield %>
+    <%= render '/partials/flash' %>
+    <% if logged_in? %>
+      <%= link_to("Home", root_path)%>
+      <%= link_to current_user.name, user_path(current_user.id) %>
+      <%= link_to("Log Out", logout_path, {method: 'delete'}) %> 
+      <%# link_to("New Spot", spot_new_path)%>
+    <% else %>
+      <%= link_to("Sign In", new_session_path) %>
+      <%= link_to("Sign Up", new_user_path) %>
+    <% end %>
+    <div class = "container" >
+      <%= yield %>
+    </div>
   </body>
 </html>
+
+
+
+  
