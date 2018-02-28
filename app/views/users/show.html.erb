@@ -1,9 +1,21 @@
+<header>
+    <h1> <%= @user.name %> </h1>
+    <h2><%= @user.about %></h2>
+    <div class = "profile_img">
+        <%= image_tag(@user.image) %>
+    </div>
+</header>
 
-<h1> <%= @user.name %> </h1>
-
-<h2><%= @user.about %></h2>
-<%= image_tag(@user.image) %>
 
 
+<div class = "spots">
+    <h2>Spots</h2>
+    <% if @user == current_user %>
+        <%= link_to "Add New Spot", new_spot_path %>
+    <% end %>
+    <p><%= @spot %></p>
+</div>
 
-<%= link_to("Destroy User", "/users/#{@user.id}", {method: 'delete', data: {confirm: "This one...really?"}}) %>
+<div class = "destroy">
+    <%= link_to("Destroy User", "/users/#{@user.id}", {method: 'delete', data: {confirm: "This one...really?"}}) %>
+</div>
