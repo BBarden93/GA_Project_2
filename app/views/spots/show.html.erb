@@ -9,6 +9,12 @@
     <li><%= @spot.obstacles %></li>
     <li><%= @spot.level_of_difficulty %></li>
     </ul>
+    <div>
     <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <%= link_to("Destroy Spot", "/spots/#{@spot.id}", {method: 'delete', data: {confirm: "This one...really?"}}) %>  
   </div>
 </div>
+
+
+

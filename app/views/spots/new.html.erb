@@ -15,22 +15,19 @@
       </div>
       <div class="form-group">
         <label>Obstacles</label>
-        <%= f.password_field :password, class: "form-control", placeholder: "Obstacles" %>
+        <%= f.text_field :obstacles, class: "form-control", placeholder: "Obstacles" %>
+      </div>
+      <div class="form-group">
+        <label>Level Of Difficulty</label>
+        <%= f.text_field :level_of_difficulty, class: "form-control", placeholder: "Level of Difficulty" %>
       </div>
       <div class="form-group">
         <label>Image</label>
-        <%= f.password_field :image, class: "form-control", placeholder: "Image URL" %>
+        <%= f.text_field :image, class: "form-control", placeholder: "Image URL" %>
       </div>
-      <%= f.submit "Create Account", class: "btn btn-primary" %>
+      <%= f.submit "New Spot", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
 
-<!-- <%= form_for(@spot) do |f| %>
-    <%= f.text_field(:location, {placeholder: "Location"}) %>
-    <%= f.text_field(:description, {placeholder: "Description"}) %>
-    <%= f.text_field(:obstacles, {placeholder: "Obstacles"}) %>
-    <%= f.text_field(:image, {placeholder: "Image URL"}) %>
-    <%= f.submit("New Spot") %>
-<% end %>
--->
+

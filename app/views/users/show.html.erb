@@ -10,12 +10,32 @@
 
 <div class = "spots">
     <h2>Spots</h2>
+    <% @user.spots.each do |s| %>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src=<%= s.image %> alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title"><%=s.location%></h5>
+                <p class="card-text"><%= s.description %></p>
+                <ul class="card-text">
+                    <li><%= s.obstacles %></li>
+                    <li><%= s.level_of_difficulty %></li>
+                </ul>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <%= link_to("Destroy Spot", "/spots/#{s.id}", {method: 'delete', data: {confirm: "This one...really?"}}) %>  
+                
+            </div>
+        </div>
+    <% end %>
+
+
     <% if @user == current_user %>
         <%= link_to "Add New Spot", new_spot_path %>
     <% end %>
-    <p><%= @spot %></p>
+   
 </div>
 
+<footer>
 <div class = "destroy">
     <%= link_to("Destroy User", "/users/#{@user.id}", {method: 'delete', data: {confirm: "This one...really?"}}) %>
 </div>
+</footer>
