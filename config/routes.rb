@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :users
   resources :spots
   resources :sessions, only: [:new, :create]
+
+  get "/about" => "pages#about"
   
   delete "/logout" => "sessions#destroy", as: :logout
 

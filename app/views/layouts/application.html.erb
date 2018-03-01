@@ -11,7 +11,11 @@
   <body>
     <%= render '/partials/flash' %>
     <%= render '/partials/navbar' %>
-    <div class = "container" >
+    <% if @user && @user.id && current_page?(user_path(@user.id))  %>
+      <div class="show-page-container container-fluid">
+    <% else %>
+      <div class = "container">
+    <% end %>
       <%= yield %>
     </div>
   </body>

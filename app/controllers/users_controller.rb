@@ -35,6 +35,7 @@ class UsersController < ApplicationController
     @user.image = params[:user][:image]
     @user.about = params[:user][:about] 
     @user.save   
+    flash[:success] = "Your changes have been saved 🤩"
     redirect_to("/users/#{@user.id}")
   end
 

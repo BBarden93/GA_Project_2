@@ -1,15 +1,46 @@
-<header>
-    <h1> <%= @user.name %> </h1>
-    <h2><%= @user.about %></h2>
+<header class = "header">
     <div class = "profile_img">
         <%= image_tag(@user.image) %>
     </div>
+    <h1> <%= @user.name %> </h1>
+    <p class = "bio"><%= @user.about %></p>
 </header>
+<div class="container">
+
+<h2>Spots</h2>
+    <% if @user == current_user %>
+        <%= link_to "Add New Spot", new_spot_path %>
+    <% end %>
+
+<div class="card-deck">
+<% @user.spots.each do |s| %>
+  <div class="card">
+    <img class="card-img-top" src=<%=s.image %> alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><%=s.location%></h5>
+      <p class="card-text"><%= s.description %></p>
+      <ul class="card-text">
+        <li><%= s.obstacles %></li>
+        <li><%= s.level_of_difficulty %></li>
+      </ul>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted"><%= link_to("Destroy Spot", "/spots/#{s.id}", {method: 'delete', data: {confirm: "This one...really?"}}) %></small>
+    </div>  
+  </div>
+  <% end %>
+</div>
 
 
+<footer class = "container">
+    <div class = "destroy">
+        <%= link_to("Destroy User", "/users/#{@user.id}", {method: 'delete', data: {confirm: "This one...really?"}}) %>
+    </div>
+</footer>
 
-<div class = "spots">
-    <h2>Spots</h2>
+</div>
+<!--
+<div class = "card-deck">
     <% @user.spots.each do |s| %>
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src=<%= s.image %> alt="Card image cap">
@@ -20,22 +51,17 @@
                     <li><%= s.obstacles %></li>
                     <li><%= s.level_of_difficulty %></li>
                 </ul>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-                <%= link_to("Destroy Spot", "/spots/#{s.id}", {method: 'delete', data: {confirm: "This one...really?"}}) %>  
-                
+                <div>
+                    <%= link_to("Edit Spot", "/spots/#{s.id}/edit") %>  
+                </div>
+                <%= link_to("Destroy Spot", "/spots/#{s.id}", {method: 'delete', data: {confirm: "This one...really?"}}) %>    
             </div>
         </div>
     <% end %>
-
-
-    <% if @user == current_user %>
-        <%= link_to "Add New Spot", new_spot_path %>
-    <% end %>
-   
+</div>     
 </div>
+-->
 
-<footer>
-<div class = "destroy">
-    <%= link_to("Destroy User", "/users/#{@user.id}", {method: 'delete', data: {confirm: "This one...really?"}}) %>
-</div>
-</footer>
+
+
+

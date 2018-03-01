@@ -6,15 +6,38 @@
     <h5 class="card-title"><%=@spot.location%></h5>
     <p class="card-text"><%= @spot.description %></p>
     <ul class="card-text">
-    <li><%= @spot.obstacles %></li>
-    <li><%= @spot.level_of_difficulty %></li>
+      <li><%= @spot.obstacles %></li>
+      <li><%= @spot.level_of_difficulty %></li>
     </ul>
-    <div>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
     <%= link_to("Destroy Spot", "/spots/#{@spot.id}", {method: 'delete', data: {confirm: "This one...really?"}}) %>  
   </div>
 </div>
 
+<!--
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="<%= @spot.image %>" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title"><%=@spot.location%></h5>
+        <p class="card-text"><%= @spot.description %></p>
+        <ul class="card-text">
+          <li><%= @spot.obstacles %></li>
+          <li><%= @spot.level_of_difficulty %></li>
+        </ul>
+        <%= link_to("Destroy Spot", "/spots/#{@spot.id}", {method: 'delete', data: {confirm: "This one...really?"}}) %>  
+      </div>
+    </div>
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
+</div>
+-->
 
 
