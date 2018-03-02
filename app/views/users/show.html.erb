@@ -25,7 +25,10 @@
       </ul>
     </div>
     <div class="card-footer">
-      <small class="text-muted"><%= link_to("Destroy Spot", "/spots/#{s.id}", {method: 'delete', data: {confirm: "This one...really?"}}) %></small>
+      <small class="text-muted"><%= link_to("Edit Spot", "/spots/#{s.id}/edit") %></small>
+      <div>
+        <small class="text-muted"><%= link_to("Destroy Spot", "/spots/#{s.id}", {method: 'delete', data: {confirm: "This one...really?"}}) %></small>
+      </div>
     </div>  
   </div>
   <% end %>

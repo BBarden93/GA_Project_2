@@ -35,7 +35,7 @@ class SpotsController < ApplicationController
   def destroy
     @spot = Spot.find(params[:id])
     @spot.destroy
-    redirect_to("/")
+    redirect_to("/users")
   end
 
   def authorize_post_view
