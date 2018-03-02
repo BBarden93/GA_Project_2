@@ -1,24 +1,33 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![General Assembly Logo](https://raw.githubusercontent.com/generalassembly/ga-ruby-on-rails-for-devs/master/images/ga.png)
 
-Things you may want to cover:
+# Project 2 : Full Stack CRUD Application
+---------------------------------- 
 
-* Ruby version
+![My Line App](https://i.imgur.com/OswiKsa.png)
 
-* System dependencies
+### My Line 
+This app is a platform for action sports athletes to post their adventures on. It allows users to create a profile and create locations with information about the site and how they ride. 
+#### Test My Line: [link](https://lit-thicket-42502.herokuapp.com/)
 
-* Configuration
+### Technology: 
+* Ruby on Rails (version 2.5.0)
+* Postgresql
+* HTML
+* CSS/SASS
+* Bootsrap
+* Bycrypt
 
-* Database creation
+### Approach:
+Create the basic structure for the database on Trello
 
-* Database initialization
+##### My Trello Board: [link](https://trello.com/b/btyViAYJ/project-2-wdi-56 )
 
-* How to run the test suite
+### Future Features:
+* Connect users (via following or friendships)
+* Add additional space for photos/videos of users at spots
+* Comment and like system
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+
