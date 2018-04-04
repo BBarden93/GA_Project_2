@@ -4,7 +4,7 @@
 # Project 2 : Full Stack CRUD Application
 ---------------------------------- 
 
-![My Line App](https://i.imgur.com/OswiKsa.png)
+![My Line App](https://i.imgur.com/Q8Ab6Pq.png)
 
 ### My Line 
 This app is a platform for action sports athletes to post their adventures on. It allows users to create a profile and create locations with information about the site and how they ride. 
