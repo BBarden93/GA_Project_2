@@ -10,7 +10,7 @@
 This app is a platform for action sports athletes to post their adventures on. It allows users to create a profile and create locations with information about the site and how they ride. 
 #### Test My Line: [link](https://lit-thicket-42502.herokuapp.com/)
 
-### Technology: 
+#### Technology: 
 * Ruby on Rails (version 2.5.0)
 * Postgresql
 * HTML
@@ -18,7 +18,7 @@ This app is a platform for action sports athletes to post their adventures on. I
 * Bootsrap
 * Bycrypt
 
-###Technical Requirements
+#### Technical Requirements
 
 * Have at least 2 models (more if they make sense) – one representing someone using your application, and at least one more that represents the main functional idea for your app.
 * Include sign up/log in functionality, with authentication. Implement basic authorization by restricting access to certain features, such as editing and deleting a resource, to an authenticated user.
@@ -28,12 +28,12 @@ This app is a platform for action sports athletes to post their adventures on. I
 * Be deployed online (Heroku) and accessible to the public.
 
 
-### Approach:
+#### Approach:
 Create the basic structure for the database on Trello
 
 ##### My Trello Board: [link](https://trello.com/b/btyViAYJ/project-2-wdi-56 )
 
-### Future Features:
+#### Future Features:
 * Connect users (via following or friendships)
 * Add additional space for photos/videos of users at spots
 * Comment and like system
